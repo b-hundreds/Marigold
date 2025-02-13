@@ -283,6 +283,7 @@ class MarigoldPipeline(DiffusionPipeline):
         torch.cuda.empty_cache()  # clear vram cache for ensembling
 
         # ----------------- Test-time ensembling -----------------
+        print("Ensemble size:", ensemble_size)
         if ensemble_size > 1:
             print("AAAAAAAAAAAAAAAAAAAAAAAAAA")
             depth_pred, pred_uncert = ensemble_depth(
