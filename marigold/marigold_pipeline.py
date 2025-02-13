@@ -216,6 +216,7 @@ class MarigoldPipeline(DiffusionPipeline):
 
         resample_method: InterpolationMode = get_tv_resample_method(resample_method)
 
+        print("Ensemble_size 1: ", ensemble_size)
         # ----------------- Image Preprocess -----------------
         # Convert to torch tensor
         if isinstance(input_image, Image.Image):
