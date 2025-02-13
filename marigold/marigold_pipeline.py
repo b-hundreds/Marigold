@@ -284,6 +284,7 @@ class MarigoldPipeline(DiffusionPipeline):
 
         # ----------------- Test-time ensembling -----------------
         if ensemble_size > 1:
+            print("AAAAAAAAAAAAAAAAAAAAAAAAAA")
             depth_pred, pred_uncert = ensemble_depth(
                 depth_preds,
                 scale_invariant=self.scale_invariant,
@@ -292,6 +293,7 @@ class MarigoldPipeline(DiffusionPipeline):
                 **(ensemble_kwargs or {}),
             )
         else:
+            print("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB")
             depth_pred = depth_preds
             pred_uncert = None
 
