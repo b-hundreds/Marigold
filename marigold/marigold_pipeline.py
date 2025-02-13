@@ -299,6 +299,7 @@ class MarigoldPipeline(DiffusionPipeline):
             depth_pred = depth_preds
             pred_uncert = None
 
+        print("Pred_uncert: ", pred_uncert)
         # Resize back to original resolution
         if match_input_res:
             depth_pred = resize(
